@@ -1,12 +1,22 @@
-const Text = ({ color, fontSize, elementType, text }) => {
-  const textStyle = {
-    color: color || 'black',
-    fontSize: fontSize || '1rem',
+import { SText } from './text.style';
+import { TText } from './text.type';
+
+const Text = ({ elementType, text }) => {
+  const elementComponents = {
+    p: 'p',
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
   };
+  const TElement = elementComponents[elementType] || 'p';
 
-  const TElement = elementType || 'p';
-
-  return <TElement style={textStyle}>{text}</TElement>;
+  return (
+    <SText>
+      <TElement>{text}</TElement>
+    </SText>
+  );
 };
+
+Text.propTypes = TText;
 
 export default Text;

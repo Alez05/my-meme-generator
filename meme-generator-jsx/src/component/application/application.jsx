@@ -1,9 +1,16 @@
+import { Body } from '../body';
+import Text from '../text/text';
+
 const MyApp = () => {
   return (
-    <div>
+    <Body>
       <h1>muist 1</h1>
       <h1>muist 2</h1>
-    </div>
+      <Text
+        text='ceva frumos '
+        elementType={'h1'}
+      />
+    </Body>
   );
 };
 
