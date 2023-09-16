@@ -6,4 +6,6 @@ export const TText = {
   color: PropTypes.string,
   fontSize: PropTypes.string,
   elementType: PropTypes.string,
+  fontWeight: PropTypes.number,
+  lineHeight: PropTypes.number,
 };

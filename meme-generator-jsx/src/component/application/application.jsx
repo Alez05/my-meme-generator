@@ -1,16 +1,23 @@
-import { Body } from '../body';
+import { Input } from '..';
+import { Box } from '../box';
+import { Global } from '../global';
+import { Header } from '../header';
 import Text from '../text/text';
 
 const MyApp = () => {
   return (
-    <Body>
-      <h1>muist 1</h1>
-      <h1>muist 2</h1>
-      <Text
-        text='ceva frumos '
-        elementType={'h1'}
-      />
-    </Body>
+    <>
+      <Box>
+        <Global />
+        <Header>
+          <Text
+            text='Meme Generator'
+            elementType={'h1'}
+          />
+        </Header>
+        <Input />
+      </Box>
+    </>
   );
 };
 

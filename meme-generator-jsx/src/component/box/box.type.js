@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
 
-export const TBody = {
+export const TBox = {
   children: PropTypes.node.isRequired,
 };

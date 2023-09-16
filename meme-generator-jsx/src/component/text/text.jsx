@@ -1,18 +1,26 @@
-import { SText } from './text.style';
+import { SH1, SH2, SH3, SP, SText } from './text.style';
 import { TText } from './text.type';
 
-const Text = ({ elementType, text }) => {
+const Text = ({ elementType, text, lineheight, weight, color, fontSize }) => {
   const elementComponents = {
-    p: 'p',
-    h1: 'h1',
-    h2: 'h2',
-    h3: 'h3',
+    p: SP, // 'p' is the default
+    h1: SH1,
+    h2: SH2,
+    h3: SH3,
   };
-  const TElement = elementComponents[elementType] || 'p';
+
+  const TElement = elementComponents[elementType] || SP;
 
   return (
     <SText>
-      <TElement>{text}</TElement>
+      <TElement
+        color={color}
+        weight={weight}
+        fontSize={fontSize}
+        lineheight={lineheight}
+      >
+        {text}
+      </TElement>
     </SText>
   );
 };
