@@ -1,4 +1,4 @@
-import { Input } from '..';
+import { BInput } from '..';
 import { Box } from '../box';
 import { Global } from '../global';
 import { Header } from '../header';
@@ -15,7 +15,7 @@ const MyApp = () => {
             elementType={'h1'}
           />
         </Header>
-        <Input />
+        <BInput />
       </Box>
     </>
   );
