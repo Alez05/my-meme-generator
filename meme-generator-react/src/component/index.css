@@ -1,0 +1,110 @@
+:root {
+  font-family: "Karla", sans-serif;
+  background-color: #d79c9c;
+
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  min-height: 100vh; /* Ensure the whole viewport height is covered */
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 550px;
+  height: 65px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.header--img{
+  width: 32px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.header--title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.box {
+  display: flex;
+  width: 550px;
+  height: 600px;
+  border: 1px solid #004586;
+  background: #FFFFFF;
+}
+
+.main {
+  width: 550px;
+  height: 600px;
+  padding: 2.25rem;
+  border: 2px solid #0d1014;
+  background: #FFFFFF;
+}
+
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr  1fr;
+  grid-gap: 10px;
+}
+
+.form--input {
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  font-family: 'Karla', sans-serif;
+  text-indent: 5px;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(90deg, #711F8D 1.14%, #A818DA 100%);
+  color: #FFFFFF;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+}
+
+.state {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.state--title{
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.state--value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #A818DA;
+}
+
+.meme--img {
+  max-width: 100%;
+}
