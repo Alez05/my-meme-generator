@@ -7,13 +7,11 @@ const Meme = () => {
   const [meme, setMeme] = useState({
     topText: '',
     bottomText: '',
-    randomImg: 'https://i.imgflip.com/1h7in3.jpg',
+    randomImg: '',
   });
 
-  const [allMemeImage, setAllMemeImage] = useState(memedata);
-
   const getMemeImage = () => {
-    const memeArray = allMemeImage.data.memes;
+    const memeArray = memedata.data.memes;
     const randomIndex = Math.floor(Math.random() * memeArray.length);
     const url = memeArray[randomIndex].url;
     setMeme((prevMeme) => {

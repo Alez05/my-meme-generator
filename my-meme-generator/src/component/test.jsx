@@ -1,30 +1,36 @@
 import { useState } from 'react';
-import Count from './count';
 
 const Test = () => {
   const [count, setCount] = useState(0);
 
-  const plus = () => {
-    setCount((prevCount) => prevCount + 1);
+  const increment = () => {
+    setCount((prevCount) => {
+      return prevCount + 1;
+    });
   };
 
-  const minus = () => {
-    setCount((prevCount) => prevCount - 1);
+  const decrement = () => {
+    setCount((prevCount) => {
+      return prevCount - 1;
+    });
   };
+
   return (
     <div className='counter'>
       <button
-        className='counter-minus'
-        onClick={minus}
-      >
-        -
-      </button>
-      <Count number={count} />
-      <button
-        onClick={plus}
-        className='counter-plus'
+        type='button'
+        className='counter-button'
+        onClick={increment}
       >
         +
+      </button>
+      <div className='counter-number'>{count}</div>
+      <button
+        type='button'
+        className='counter-button'
+        onClick={decrement}
+      >
+        -
       </button>
     </div>
   );
