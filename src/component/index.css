@@ -1,6 +1,6 @@
 :root {
   font-family: "Karla", sans-serif;
-  background-color: #d79c9c;
+  background-color: #2bb6e0;
 
 
 }
@@ -114,6 +114,10 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 1.5rem;
+  background-color: #A626D3;
+  padding: 1rem;
+  border-radius: 5px;
+
 }
 
 .counter-number{
@@ -121,7 +125,7 @@ body {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.5px;
-  color: #A818DA;
+  color: #000000;
 }
 
 .counter-button {
@@ -134,4 +138,12 @@ body {
   border: 1px solid #D5D4D8;
   background: #FFFFFF;
   cursor: pointer;
+}
+
+.thebox {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: black 1px solid;
+  margin-right: 10px;
 }
