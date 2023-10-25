@@ -185,3 +185,31 @@ export default function Test() {
     </form>
   );
 }
+
+// import { useState } from 'react';
+// import boxes from './boxes';
+// import { Box } from './box';
+
+// const App = () => {
+//   const [squares, setSquares] = useState(boxes);
+
+//   const toggle = (id) => {
+//     setSquares((prevSquare) => {
+//       return prevSquare.map((square) => {
+//         return square.id === id ? { ...square, on: !square.on } : square;
+//       });
+//     });
+//   };
+
+//   const squareElements = squares.map((square) => (
+//     <Box
+//       key={square.id}
+//       on={square.on}
+//       handleClick={() => toggle(square.id)}
+//     />
+//   ));
+
+//   return <>{squareElements}</>;
+// };
+
+// export default App;
