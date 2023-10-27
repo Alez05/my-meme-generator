@@ -1,6 +1,6 @@
 const Header = () => {
   const handleOnMouseOver = () => {
-    console.log('Hovered over the header');
+    // console.log('Hovered over the header');
   };
   return (
     <header className='header'>

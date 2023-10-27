@@ -3,9 +3,9 @@ import { useState } from 'react';
 const Api = () => {
   const [starData, setStarData] = useState();
 
-  fetch('https://swapi.dev/api/starships/')
-    .then((res) => res.json())
-    .then((data) => setStarData(data));
+  // fetch('https://swapi.dev/api/starships/')
+  //   .then((res) => res.json())
+  //   .then((data) => setStarData(data));
 
   return (
     <div>
