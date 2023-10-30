@@ -1,15 +1,17 @@
 import { useState } from 'react';
+import WindowTracker from './windowtraker';
 
 const Api = () => {
-  const [starData, setStarData] = useState();
+  const [show, setShow] = useState(true);
 
-  // fetch('https://swapi.dev/api/starships/')
-  //   .then((res) => res.json())
-  //   .then((data) => setStarData(data));
+  const handleEvent = () => {
+    setShow((prevShow) => !prevShow);
+  };
 
   return (
     <div>
-      <pre>{JSON.stringify(starData, null, 2)}</pre>
+      <button onClick={handleEvent}>Toggle window tracker</button>
+      {show && <WindowTracker />}
     </div>
   );
 };
