@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 
 const Meme = () => {
-  // const [memeImage, setMemeImage] = useState('');
-
   const [meme, setMeme] = useState({
     topText: '',
     bottomText: '',
@@ -11,9 +9,12 @@ const Meme = () => {
   const [allMeme, setAllMeme] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.imgflip.com/get_memes')
-      .then((res) => res.json())
-      .then((data) => setAllMeme(data.data.memes));
+    async function fetchData() {
+      const res = await fetch('https://api.imgflip.com/get_memes');
+      const data = await res.json();
+      setAllMeme(data.data.memes);
+    }
+    fetchData();
   }, []);
 
   const handleChange = (e) => {
@@ -27,13 +28,12 @@ const Meme = () => {
   const getMemeImage = () => {
     const randomIndex = Math.floor(Math.random() * allMeme.length);
     const url = allMeme[randomIndex].url;
-    setMeme((prevMeme) => {
-      return {
-        ...prevMeme,
-        randomImg: url,
-      };
-    });
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      randomImg: url,
+    }));
   };
+
   return (
     <main className='main'>
       <form className='form'>
@@ -65,6 +65,7 @@ const Meme = () => {
         <img
           src={meme.randomImg}
           className='meme--img'
+          alt='Random Meme'
         />
         <h2 className='text__top'>{meme.topText}</h2>
         <h2 className='text__bottom'>{meme.bottomText}</h2>
